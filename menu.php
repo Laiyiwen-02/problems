@@ -1,18 +1,13 @@
-<title> CLOJ - 由一个 Oier 创建的OJ </title>
+<title> CL prob - CL 题目大全 </title>
 <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/layui/2.11.1/css/layui.css">
 <link rel = "stylesheet" href = "https://use.sevencdn.com/npm/github-markdown-css@5.6.1/github-markdown-light.css">
-<link rel = "stylesheet" href = "https://cdn.jsdelivr.net/gh/laiyiwen-02/cdn@0.0.1/prism/prism.css">
-<!-- <style>
-  p, h1, h2, h3, h4, h5, h6, li, ul, tr, td, table, thead, tbody {
-    font-family: 'Comic Sans MS', 仿宋;
-    font-weight: bold;
-  }
-</style> -->
+<link rel = "stylesheet" href = "https://cdn.jsdelivr.net/gh/laiyiwen-02/cdn@0.0.3/prism/prism.css">
+<link rel="shortcut icon" href="https://cdn.luogu.com.cn/upload/image_hosting/xfli7cxb.png" type="image/x-icon">
 <div>
   <ul class = "layui-nav layui-bg-gray">
     <li class = "layui-nav-item">
       <a href = "/">
-        <img src = "https://cdn.luogu.com.cn/upload/usericon/833737.png" class = "layui-nav-img" alt = "CL"> problems
+        <img src = "https://cdn.luogu.com.cn/upload/image_hosting/xfli7cxb.png" class = "layui-nav-img" alt = "CL"> 题集
       </a>
     </li>
     <li class = "layui-nav-item">

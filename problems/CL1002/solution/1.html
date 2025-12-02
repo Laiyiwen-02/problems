@@ -1,0 +1,29 @@
+<p>我们对于每个 $i$ 考虑这个点只有可能向后面的 $(n-i)$ 个点连边的时候会产生贡献，注意到对每个东西产生 $\dfrac{n-i}{n}$ 的贡献，对每个东西求和，注意到代码：</p>
+<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
+#define ll long long
+#define db double
+#define vec vector
+#define pb push_back
+#define pll pair&lt;ll,ll&gt;
+#define mkp make_pair
+#define il inline
+#define endl &quot;\n&quot;
+using namespace std;
+const ll mod=998244353;
+const ll inf=1e18;
+ll n,inv[10000005];
+void add(ll &amp;x,ll y){return x+=y,(x&gt;=mod?x-=mod:0),void(0);}
+int main(){
+	ios::sync_with_stdio(false);
+	cin.tie(0),cout.tie(0);
+	cin&gt;&gt;n;
+	inv[1]=1;
+	for(ll i=2;i&lt;=n;i++) inv[i]=(mod-inv[mod%i]*(mod/i)%mod);
+	ll ans=0,rt=1;
+	for(ll i=1;i&lt;=n;i++){
+		add(ans,rt),rt*=(n-i)*inv[n]%mod,rt%=mod;
+	} 
+	cout&lt;&lt;ans&lt;&lt;endl;
+	return 0;
+}
+</code></pre>

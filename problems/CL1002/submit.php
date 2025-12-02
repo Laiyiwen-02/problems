@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <?php include "../menu.php"; ?>
+  <?php include "../../menu.php"; ?>
   <head>
     <style>
         html, body {
@@ -14,11 +14,11 @@
   </head>
   <body>
     <div class = "layui-panel" style = "padding: 2%; margin: 2%;height: 60%;">
-      <form class="layui-form" action="/problems/action.php" method="post" style="height: 100%;">
+      <form class="layui-form" action="/problems/CL1002/action.php" method="post" style="height: 100%;">
         <div class="layui-form-item" style="height: 100%;">
-          <label class="layui-form-label" style="height: 10%;">题目</label>
+          <label class="layui-form-label" style="height: 10%;">标题</label>
           <div class="layui-input-block">
-            <input type="text" name="title" required  lay-verify="required" placeholder="请输入题目" autocomplete="off" class="layui-input">
+            <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
           </div>
           <div class="layui-form-item" style="height: 80%;">
             <label class="layui-form-label">内容</label>
@@ -33,7 +33,6 @@
                       <textarea id = "h" name = "h" hidden></textarea>
                   </div>
               </div>
-              
             </div>
           </div>
           <div style = "height: 10%; width:100%;">
@@ -54,7 +53,6 @@
                 "vs": "https://s4.zstatic.net/ajax/libs/monaco-editor/0.52.2/min/vs/"
             }
         });
-    
         require(["vs/editor/editor.main"], function () {
             var editor = monaco.editor.create(document.getElementById("editor"), {
                 value: "",
@@ -64,8 +62,8 @@
             editor.onDidChangeModelContent((e) => {
                 var t = document.getElementById("t");
                 function trans(md) {
-                    // md = md.replace(/\\/g, '\\\\');
-                    // md = md.replace(/\\\\\&/g, '\\\&');
+                    // md = md.replace(/\/g, '\\');
+                    // md = md.replace(/\\\&/g, '\\&');
                     return md;
                 }
                 var md = editor.getValue(); md = trans(md);
@@ -84,6 +82,6 @@
             });
         });
     </script>
-    <?php include "../footer.php"; ?>
+    <?php include "../../footer.php"; ?>
   </body>
 </html>
